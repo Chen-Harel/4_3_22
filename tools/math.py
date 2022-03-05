@@ -32,8 +32,15 @@ class Calc:
         div=n1/n2
         return div
 
-    def fibonacci():
-        pass
+    def fibonacci(n):
+        output = []
+        if n==1:
+            fList=[0]
+        elif n==2:
+            fList=[0,1]
+        elif n <=len(output):
+                return fList[n-1]
+        print(fList)
 
     def calcMenu():
         print("1 - Add")
@@ -53,7 +60,7 @@ class Calc:
         elif userChoice == "4":
             print(f"Your total is: {Calc.divNums()}")
         elif userChoice == "5":
-            Calc.fibonacci()
+            Calc.fibonacci(10)
         elif userChoice == "x":
             return
         else:
