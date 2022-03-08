@@ -33,9 +33,11 @@ class Strings:
             print('Strings length are equal!')
 
     def stringReplace():
-        inp = input("Enter a string: ")
-        inp.replace("%", "_")
-        inp.replace("$", "_")
+        userInput = input("Enter a string: ")
+        x=re.sub("\$","_",userInput)
+        #userInput=re.sub("%", "PERCENTSIGN", userInput)
+        print(x)
+        
 
     def emailValidateWithRegEx():
         regex = "^[a-zA-Z0-9]+[\._]?[a-zA-Z0-9]+[@]\w+[.]\w{2,3}$"
@@ -59,7 +61,7 @@ class Strings:
         if userChoice == "1":Strings.simpFunc()
         elif userChoice == "2":Strings.longestString()
         elif userChoice == "3":Strings.stringReplace()
-        elif userChoice == "4":Strings.stringReplaceWithRegEx()
+        elif userChoice == "4":Strings.emailValidateWithRegEx()()
         elif userChoice == "x":return
         else:
             print("Please select an option from the menu...")
